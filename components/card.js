@@ -1,6 +1,6 @@
 
 
-export const cardComponents=(imagen,nombre,texto,precio)=>{
+export const cardComponents=(id,imagen,nombre,texto,precio)=>{
     return `
      <div class="col d-flex">
             <div class="card bg-card h-100 w-100 d-flex flex-column">
@@ -18,7 +18,7 @@ export const cardComponents=(imagen,nombre,texto,precio)=>{
                     <input type="number" class="form-control input-cantidad w-100" min="0" max="5" placeholder="0" step="1">
                   </div>
                   <div class="col-3">
-                    <button class="btn btn-comprar"><img src="/imgs/carrito.png" style="width:30px"></button>
+                    <button class="btn btn-comprar" data-id="${id}" data-nombre="${nombre}" data-texto="${texto}" data-imagen="${imagen}" data-precio="${precio}"><img src="/imgs/carrito.png" style="width:30px"></button>
                   </div>
                 </div>           
               </div> 

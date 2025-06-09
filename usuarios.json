@@ -1,0 +1,13 @@
+[
+    {
+        "nombre": "Juan Gallo",
+        "email": "juan@gmail.com",
+        "pass": "123"
+    },
+    {
+        "nombre":"Milton Gimenez",
+        "email": "milton@gmail.com",
+        "pass": "345"
+    }
+
+]
