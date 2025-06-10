@@ -1,7 +1,7 @@
 import { NavBar } from "/components/NavBar.js"
 import { cardComponents } from "/components/card.js"
 import { removeSessionItem } from "/utils/sessionstorageController.js"
-import { getData,setData,deleteData } from "/utils/localsotrageController.js"
+import { getData,setData,deleteData } from "/utils/localstorageController.js"
 
 let cardContainer=document.getElementById('card-container')
 let navContainer = document.querySelector('header')

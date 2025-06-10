@@ -1,5 +1,5 @@
 import { removeSessionItem, getSessionItem } from "/utils/sessionstorageController.js";
-import { deleteData } from "/utils/localsotrageController.js";
+import { deleteData } from "/utils/localstorageController.js";
 
 const userData = getSessionItem('userData');
 
@@ -33,7 +33,7 @@ export const NavBar = `
       </ul>
       <span class="navbar-text text-white ms-auto text-end" style="line-height: 1.2;">
         Usuario:<br>
-        <strong>${userData.nombre}</strong>
+        <strong>${userData.nombre} ${userData.apellido}</strong>
       </span>
     </div>
   </div>

@@ -1,5 +1,5 @@
-import { setSessionItem } from "./utils/sessionstorageController.js";
-import { getData } from "./utils/localsotrageController.js";  // Importá tu función para leer localStorage
+import { setSessionItem } from "/utils/sessionstorageController.js";
+import { getData } from "/utils/localstorageController.js";  // Importá tu función para leer localStorage
 
 const form = document.getElementById("login");
 
