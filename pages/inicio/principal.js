@@ -18,7 +18,7 @@ const btnLogout = document.getElementById('cerrarSesion')
       e.preventDefault()
       removeSessionItem('userData')  
       deleteData('carrito')
-      window.location.href = './index.html'
+      window.location.href = '../../index.html'
     })
   }
 
