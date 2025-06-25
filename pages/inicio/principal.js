@@ -43,7 +43,7 @@ window.addEventListener('load', () => {
     const mezclados = seleccionados.sort(() => 0.5 - Math.random());
 
     const cards = mezclados.map(e =>
-      cardComponents(e.id, `/AW1-pages/imgs/${e.image}`, e.title, e.description, e.price)
+      cardComponents(e.id, e.image, e.title, e.description, e.price)
     ).join('');
 
     cardContainer.innerHTML = cards;
