@@ -15,7 +15,7 @@ const navElements = [
 export const NavBar = `
 <nav class="navbar navbar-expand-lg bg-card">
   <div class="container-fluid">
-    <a class="navbar-brand" href="../pages/inicio/principal.html">
+    <a class="navbar-brand" href="/AW1-pages/pages/inicio/principal.html">
       <img src="/AW1-pages/imgs/logo.png" alt="Logo" width="75" height="75" class="rounded-circle bg-logo">
  </a>
     <button class="navbar-toggler bg-nav-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault(); // Evitar que siga el link
       deleteData('carrito')
       removeSessionItem('userData'); // Remover solo la clave userData
-      window.location.href = '../index.html'; // Redirigir al login o inicio
+      window.location.href = '/AW1-pages/index.html'; // Redirigir al login o inicio
     });
   }
 });
