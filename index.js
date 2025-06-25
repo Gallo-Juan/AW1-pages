@@ -1,5 +1,5 @@
-import { setSessionItem } from "/utils/sessionstorageController.js";
-import { getData } from "/utils/localstorageController.js";  // Importá tu función para leer localStorage
+import { setSessionItem } from "utils/sessionstorageController.js";
+import { getData } from "utils/localstorageController.js";  // Importá tu función para leer localStorage
 
 const form = document.getElementById("login");
 
@@ -28,7 +28,7 @@ form.addEventListener("submit", (e) => {
 
             if (user) {
                 setSessionItem("userData", user);
-                window.location.href = "/pages/inicio/principal.html";
+                window.location.href = "pages/inicio/principal.html";
             } else {
                 alert("Usuario o contraseña incorrectos.");
             }
