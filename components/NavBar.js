@@ -1,5 +1,5 @@
-import { removeSessionItem, getSessionItem } from "../utils/sessionstorageController.js";
-import { deleteData } from "../utils/localstorageController.js";
+import { removeSessionItem, getSessionItem } from "/AW1-pages/utils/sessionstorageController.js";
+import { deleteData } from "/AW1-pages/utils/localstorageController.js";
 
 const userData = getSessionItem('userData');
 
