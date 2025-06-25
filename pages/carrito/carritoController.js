@@ -1,7 +1,7 @@
-import { NavBar } from "../../components/NavBar.js"
-import { removeSessionItem } from "../../utils/sessionstorageController.js"
-import { cardCarrito } from "../../components/cardCarrito.js"
-import { setData, getData, deleteData } from "../../utils/localstorageController.js"
+import { NavBar } from "/AW1-pages/components/NavBar.js"
+import { removeSessionItem } from "/AW1-pages/utils/sessionstorageController.js"
+import { cardCarrito } from "/AW1-pages/components/cardCarrito.js"
+import { setData, getData, deleteData } from "/AW1-pages/utils/localstorageController.js"
 
 
 let navContainer = document.querySelector('header')
@@ -41,7 +41,7 @@ window.addEventListener('load',() => {
       e.preventDefault()
       removeSessionItem('userData')  
       deleteData('carrito')
-      window.location.href = '../../index.html'
+      window.location.href = '/AW1-pages/index.html'
     })
   }
 

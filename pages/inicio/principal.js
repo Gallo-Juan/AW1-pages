@@ -1,7 +1,7 @@
-import { cardComponents } from "../../components/card.js"
-import { NavBar } from "../../components/NavBar.js"
-import { removeSessionItem } from "../../utils/sessionstorageController.js"
-import { getData,setData,deleteData } from "../../utils/localstorageController.js"
+import { cardComponents } from "/AW1-pages/components/card.js"
+import { NavBar } from "/AW1-pages/components/NavBar.js"
+import { removeSessionItem } from "/AW1-pages/utils/sessionstorageController.js"
+import { getData,setData,deleteData } from "/AW1-pages/utils/localstorageController.js"
 
 let cardContainer=document.getElementById('card-container')
 let navContainer = document.querySelector('header')
@@ -18,7 +18,7 @@ const btnLogout = document.getElementById('cerrarSesion')
       e.preventDefault()
       removeSessionItem('userData')  
       deleteData('carrito')
-      window.location.href = '../../index.html'
+      window.location.href = '/AW1-pages/index.html'
     })
   }
 
@@ -26,7 +26,7 @@ const btnLogout = document.getElementById('cerrarSesion')
     document.title=pageName
 
 
-    fetch('../../productos.json').then(res=>res.json()).then(data=>{
+    fetch('/AW1-pages/productos.json').then(res=>res.json()).then(data=>{
     
         // Función para obtener 4 elementos aleatorios de un array
         function obtenerAleatorios(arr, cantidad) {
