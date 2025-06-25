@@ -4,18 +4,18 @@ import { deleteData } from "./utils/localstorageController.js";
 const userData = getSessionItem('userData');
 
 const navElements = [
-  { id: 'ropaHombre', title: 'Ropa de Hombre', link: '../pages/categorias/RopaHombre.html' },
-  { id: 'ropaMujer', title: 'Ropa de Mujer', link: '../pages/categorias/RopaMujer.html' },
-  { id: 'electronica', title: 'Electrónica', link: '../pages/categorias/Electronica.html' },
-  { id: 'carrito', title: '<img src="../imgs/carrito.png" alt="Carrito" width="40" height="40" class="rounded-circle img-carrito">', link: "/pages/carrito/carrito.html" },
-  { id: 'cerrarSesion', title: 'Cerrar Sesión', link: '../index.html' } 
+  { id: 'ropaHombre', title: 'Ropa de Hombre', link: './pages/categorias/RopaHombre.html' },
+  { id: 'ropaMujer', title: 'Ropa de Mujer', link: './pages/categorias/RopaMujer.html' },
+  { id: 'electronica', title: 'Electrónica', link: './pages/categorias/Electronica.html' },
+  { id: 'carrito', title: '<img src="./imgs/carrito.png" alt="Carrito" width="40" height="40" class="rounded-circle img-carrito">', link: "/pages/carrito/carrito.html" },
+  { id: 'cerrarSesion', title: 'Cerrar Sesión', link: './index.html' } 
 ];
 
 export const NavBar = `
 <nav class="navbar navbar-expand-lg bg-card">
   <div class="container-fluid">
     <a class="navbar-brand" href="/pages/inicio/principal.html">
-      <img src="/imgs/logo.png" alt="Logo" width="75" height="75" class="rounded-circle bg-logo">
+      <img src="../imgs/logo.png" alt="Logo" width="75" height="75" class="rounded-circle bg-logo">
     </a>
     <button class="navbar-toggler bg-nav-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

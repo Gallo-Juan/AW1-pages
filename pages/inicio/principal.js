@@ -18,7 +18,7 @@ const btnLogout = document.getElementById('cerrarSesion')
       e.preventDefault()
       removeSessionItem('userData')  
       deleteData('carrito')
-      window.location.href = '/index.html'
+      window.location.href = './index.html'
     })
   }
 
@@ -26,7 +26,7 @@ const btnLogout = document.getElementById('cerrarSesion')
     document.title=pageName
 
 
-    fetch('../../productos.json').then(res=>res.json()).then(data=>{
+    fetch('./productos.json').then(res=>res.json()).then(data=>{
     
         // Función para obtener 4 elementos aleatorios de un array
         function obtenerAleatorios(arr, cantidad) {
