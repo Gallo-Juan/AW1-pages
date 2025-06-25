@@ -1,5 +1,5 @@
-import { removeSessionItem, getSessionItem } from "/utils/sessionstorageController.js";
-import { deleteData } from "/utils/localstorageController.js";
+import { removeSessionItem, getSessionItem } from "../utils/sessionstorageController.js";
+import { deleteData } from "../utils/localstorageController.js";
 
 const userData = getSessionItem('userData');
 
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault(); // Evitar que siga el link
       deleteData('carrito')
       removeSessionItem('userData'); // Remover solo la clave userData
-      window.location.href = 'index.html'; // Redirigir al login o inicio
+      window.location.href = '../index.html'; // Redirigir al login o inicio
     });
   }
 });
