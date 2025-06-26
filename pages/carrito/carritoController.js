@@ -9,6 +9,7 @@ let pageName=document.getElementById('pageName').value
 let title=document.getElementById('title')
 let cardContainer=document.getElementById('card-container')
 const totalContainer = document.getElementById("total-carrito")
+const btnFinalizar = document.getElementById('btn-finalizar-compra');
 
 const prod=[{
       "id": 1,
@@ -84,3 +85,14 @@ function configurarBotonesEliminar() {
     });
   });
 }
+
+btnFinalizar.addEventListener('click', () => {
+    // Vaciar el carrito
+    deleteData('carrito');
+
+    // Mostrar mensaje (opcional)
+    alert('¡Gracias por tu compra!');
+
+    // Recargar la página para actualizar vista
+    location.reload();
+  });
