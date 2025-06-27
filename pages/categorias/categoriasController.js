@@ -7,6 +7,14 @@ let cardContainer=document.getElementById('card-container')
 let navContainer = document.querySelector('header')
 let pageName=document.getElementById('pageName').value
 let title=document.getElementById('title')
+let productosFiltrados = []
+
+function mostrarProductos(lista) {
+  const cards = lista.map(e =>
+    cardComponents(e.id, e.image, e.title, e.description, e.price)
+  ).join('')
+  cardContainer.innerHTML = cards
+}
 
 
 window.addEventListener('load',() => {
@@ -25,14 +33,26 @@ window.addEventListener('load',() => {
     title.textContent=pageName
     document.title=`${pageName} - Tu Rincon Online` 
 
-    fetch('/productos.json').then(res=>res.json()).then(data=>{
-        const filtro=data.filter(e=>e.category===pageName) 
-        const cards=filtro.map(e=>{
-            return cardComponents(e.id,e.image,e.title,e.description,e.price)      
-        }).join('')        
-        cardContainer.innerHTML=cards
-    })
+    fetch('/productos.json').then(res => res.json()).then(data => {
+  productosFiltrados = data.filter(e => e.category === pageName)
+  mostrarProductos(productosFiltrados)
+
+  const ordenPrecio = document.getElementById('ordenPrecio')
+  ordenPrecio.addEventListener('change', () => {
+    const orden = ordenPrecio.value
+    let copia = [...productosFiltrados]
+
+    if (orden === 'asc') {
+      copia.sort((a, b) => a.price - b.price)
+    } else if (orden === 'desc') {
+      copia.sort((a, b) => b.price - a.price)
+    }
+
+    mostrarProductos(copia)
+  })
 })
+
+    })
 
 cardContainer.addEventListener('click', (e) => {
   const boton = e.target.closest('.btn-comprar')
