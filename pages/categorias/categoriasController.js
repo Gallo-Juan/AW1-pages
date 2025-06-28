@@ -1,7 +1,7 @@
-import { NavBar } from "/components/NavBar.js"
-import { cardComponents } from "/components/card.js"
-import { removeSessionItem } from "/utils/sessionstorageController.js"
-import { getData,setData,deleteData } from "/utils/localstorageController.js"
+import { NavBar } from "/AW1-pages/components/NavBar.js"
+import { cardComponents } from "/AW1-pages/components/card.js"
+import { removeSessionItem } from "/AW1-pages/utils/sessionstorageController.js"
+import { getData,setData,deleteData } from "/AW1-pages/utils/localstorageController.js"
 
 let cardContainer=document.getElementById('card-container')
 let navContainer = document.querySelector('header')
@@ -26,13 +26,18 @@ window.addEventListener('load',() => {
       e.preventDefault()
       deleteData('carrito')
       removeSessionItem('userData')  
+<<<<<<< HEAD
       window.location.href = '../../index.html'
+=======
+      window.location.href = '/AW1-pages/index.html'
+>>>>>>> b86c330538ebd8decf433a7c06970c2d72137f73
     })
   }
 
     title.textContent=pageName
     document.title=`${pageName} - Tu Rincon Online` 
 
+<<<<<<< HEAD
     fetch('../../productos.json').then(res => res.json()).then(data => {
   productosFiltrados = data.filter(e => e.category === pageName)
   mostrarProductos(productosFiltrados)
@@ -50,6 +55,15 @@ window.addEventListener('load',() => {
 
     mostrarProductos(copia)
   })
+=======
+    fetch('/AW1-pages/productos.json').then(res=>res.json()).then(data=>{
+        const filtro=data.filter(e=>e.category===pageName) 
+        const cards=filtro.map(e=>{
+            return cardComponents(e.id,e.image,e.title,e.description,e.price)      
+        }).join('')        
+        cardContainer.innerHTML=cards
+    })
+>>>>>>> b86c330538ebd8decf433a7c06970c2d72137f73
 })
 
     })
