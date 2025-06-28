@@ -25,7 +25,7 @@ window.addEventListener('load', () => {
   title.textContent = `Bienvenido a ${pageName}`;
   document.title = pageName;
 
-  fetch('/AW1-pages/productos.json').then(res => res.json()).then(data => {
+  fetch('/productos.json').then(res => res.json()).then(data => {
     function obtenerAleatorios(arr, cantidad) {
       return arr.sort(() => 0.5 - Math.random()).slice(0, cantidad);
     }
