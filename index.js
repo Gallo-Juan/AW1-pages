@@ -9,7 +9,7 @@ form.addEventListener("submit", (e) => {
     const email = document.getElementById("email").value.trim().toLowerCase();
     const pass = document.getElementById("pass").value.trim();
 
-    fetch("/usuarios.json")
+    fetch("./usuarios.json")
         .then((res) => {
             if (!res.ok) {
                 throw new Error("Error cargando usuarios.json");
