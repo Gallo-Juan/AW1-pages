@@ -1,5 +1,5 @@
 import { setSessionItem } from "/utils/sessionstorageController.js";
-import { getData } from "/utils/localstorageController.js";  // Importá tu función para leer localStorage
+import { getData } from "/utils/localstorageController.js";  
 
 const form = document.getElementById("login");
 
@@ -9,7 +9,7 @@ form.addEventListener("submit", (e) => {
     const email = document.getElementById("email").value.trim().toLowerCase();
     const pass = document.getElementById("pass").value.trim();
 
-    fetch("./usuarios.json")
+    fetch("/usuarios.json")
         .then((res) => {
             if (!res.ok) {
                 throw new Error("Error cargando usuarios.json");
@@ -22,7 +22,7 @@ form.addEventListener("submit", (e) => {
 
             if (!user) {
                 // Si no está en JSON, buscar en localStorage
-                const localUsers = getData('usuarios') || [];  // Asumí que guardás usuarios nuevos en la clave 'usuarios'
+                const localUsers = getData('usuarios') || [];  
                 user = localUsers.find(u => u.email.toLowerCase() === email && u.password === pass);
             }
 
