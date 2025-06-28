@@ -26,14 +26,14 @@ window.addEventListener('load',() => {
       e.preventDefault()
       deleteData('carrito')
       removeSessionItem('userData')  
-      window.location.href = '/index.html'
+      window.location.href = '../../index.html'
     })
   }
 
     title.textContent=pageName
     document.title=`${pageName} - Tu Rincon Online` 
 
-    fetch('/productos.json').then(res => res.json()).then(data => {
+    fetch('../../productos.json').then(res => res.json()).then(data => {
   productosFiltrados = data.filter(e => e.category === pageName)
   mostrarProductos(productosFiltrados)
 
