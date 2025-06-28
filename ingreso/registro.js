@@ -32,11 +32,7 @@ form.addEventListener('submit', (e) => {
     addUser(nuevoUsuario)
     alert('Usuario registrado con éxito')
     form.reset()
-<<<<<<< HEAD
     window.location.href = '../index.html' 
-=======
-    window.location.href = '/AW1-pages/index.html' 
->>>>>>> b86c330538ebd8decf433a7c06970c2d72137f73
   } catch (error) {
     alert(error.message)
   }

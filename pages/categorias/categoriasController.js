@@ -26,18 +26,13 @@ window.addEventListener('load',() => {
       e.preventDefault()
       deleteData('carrito')
       removeSessionItem('userData')  
-<<<<<<< HEAD
       window.location.href = '../../index.html'
-=======
-      window.location.href = '/AW1-pages/index.html'
->>>>>>> b86c330538ebd8decf433a7c06970c2d72137f73
-    })
+    });
   }
 
     title.textContent=pageName
     document.title=`${pageName} - Tu Rincon Online` 
 
-<<<<<<< HEAD
     fetch('../../productos.json').then(res => res.json()).then(data => {
   productosFiltrados = data.filter(e => e.category === pageName)
   mostrarProductos(productosFiltrados)
@@ -54,17 +49,8 @@ window.addEventListener('load',() => {
     }
 
     mostrarProductos(copia)
-  })
-=======
-    fetch('/AW1-pages/productos.json').then(res=>res.json()).then(data=>{
-        const filtro=data.filter(e=>e.category===pageName) 
-        const cards=filtro.map(e=>{
-            return cardComponents(e.id,e.image,e.title,e.description,e.price)      
-        }).join('')        
-        cardContainer.innerHTML=cards
-    })
->>>>>>> b86c330538ebd8decf433a7c06970c2d72137f73
-})
+  });
+});
 
     })
 

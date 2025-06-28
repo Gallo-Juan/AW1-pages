@@ -15,19 +15,11 @@ window.addEventListener('load', () => {
   const btnLogout = navContainer.querySelector('#cerrarSesion');
   if (btnLogout) {
     btnLogout.addEventListener('click', (e) => {
-<<<<<<< HEAD
       e.preventDefault()
       removeSessionItem('userData')  
       deleteData('carrito')
       window.location.href = '../../index.html'
     })
-=======
-      e.preventDefault();
-      removeSessionItem('userData');
-      deleteData('carrito');
-      window.location.href = '/AW1-pages/index.html';
-    });
->>>>>>> b86c330538ebd8decf433a7c06970c2d72137f73
   }
 
   title.textContent = `Bienvenido a ${pageName}`;
@@ -38,18 +30,12 @@ window.addEventListener('load', () => {
       return arr.sort(() => 0.5 - Math.random()).slice(0, cantidad);
     }
 
-<<<<<<< HEAD
     fetch('../../productos.json').then(res=>res.json()).then(data=>{
     
         // Función para obtener 4 elementos aleatorios de un array
         function obtenerAleatorios(arr, cantidad) {
                 return arr.sort(() => 0.5 - Math.random()).slice(0, cantidad);
         }
-=======
-    const categoria1 = data.filter(p => p.category === 'Ropa de Hombre');
-    const categoria2 = data.filter(p => p.category === 'Ropa de Mujer');
-    const categoria3 = data.filter(p => p.category === 'Electrónica');
->>>>>>> b86c330538ebd8decf433a7c06970c2d72137f73
 
     const seleccionados = [
       ...obtenerAleatorios(categoria1, 4),
@@ -65,6 +51,7 @@ window.addEventListener('load', () => {
 
     cardContainer.innerHTML = cards;
   });
+});
 });
 
 cardContainer.addEventListener('click', (e) => {
