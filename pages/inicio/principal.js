@@ -30,12 +30,6 @@ window.addEventListener('load', () => {
       return arr.sort(() => 0.5 - Math.random()).slice(0, cantidad);
     }
 
-    fetch('../../productos.json').then(res=>res.json()).then(data=>{
-    
-        // Función para obtener 4 elementos aleatorios de un array
-        function obtenerAleatorios(arr, cantidad) {
-                return arr.sort(() => 0.5 - Math.random()).slice(0, cantidad);
-        }
 
     const seleccionados = [
       ...obtenerAleatorios(categoria1, 4),
@@ -52,7 +46,7 @@ window.addEventListener('load', () => {
     cardContainer.innerHTML = cards;
   });
 });
-});
+
 
 cardContainer.addEventListener('click', (e) => {
   const boton = e.target.closest('.btn-comprar')
