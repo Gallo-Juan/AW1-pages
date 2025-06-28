@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { setSessionItem } from "/utils/sessionstorageController.js";
 import { getData } from "/utils/localstorageController.js";  
-=======
-import { setSessionItem } from "/AW1-pages/utils/sessionstorageController.js";
-import { getData } from "/AW1-pages/utils/localstorageController.js";  // Importá tu función para leer localStorage
->>>>>>> b86c330538ebd8decf433a7c06970c2d72137f73
 
 const form = document.getElementById("login");
 
@@ -33,11 +28,7 @@ form.addEventListener("submit", (e) => {
 
             if (user) {
                 setSessionItem("userData", user);
-<<<<<<< HEAD
                 window.location.href = "pages/inicio/principal.html";
-=======
-                window.location.href = "/AW1-pages/pages/inicio/principal.html";
->>>>>>> b86c330538ebd8decf433a7c06970c2d72137f73
             } else {
                 alert("Usuario o contraseña incorrectos.");
             }
