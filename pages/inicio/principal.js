@@ -30,6 +30,10 @@ window.addEventListener('load', () => {
       return arr.sort(() => 0.5 - Math.random()).slice(0, cantidad);
     }
 
+    // Agrupar por categoría
+        const categoria1 = data.filter(p => p.category === 'Ropa de Hombre');
+        const categoria2 = data.filter(p => p.category === 'Ropa de Mujer');
+        const categoria3 = data.filter(p => p.category === 'Electrónica');
 
     const seleccionados = [
       ...obtenerAleatorios(categoria1, 4),
