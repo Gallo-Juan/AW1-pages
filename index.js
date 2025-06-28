@@ -1,4 +1,4 @@
-import { setSessionItem } from "./utils/sessionstorageController.js";
+import {setSessionItem} from "./utils/sessionstorageController.js"
 import { getData } from "./utils/localstorageController.js";  
 
 const form = document.getElementById("login");
