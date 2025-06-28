@@ -28,7 +28,7 @@ form.addEventListener("submit", (e) => {
 
             if (user) {
                 setSessionItem("userData", user);
-                window.location.href = "pages/inicio/principal.html";
+                window.location.href = "./pages/inicio/principal.html";
             } else {
                 alert("Usuario o contraseña incorrectos.");
             }
