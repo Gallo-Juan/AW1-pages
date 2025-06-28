@@ -1,7 +1,7 @@
-import { NavBar } from "/AW1-pages/components/NavBar.js"
-import { cardComponents } from "/AW1-pages/components/card.js"
-import { removeSessionItem } from "/AW1-pages/utils/sessionstorageController.js"
-import { getData,setData,deleteData } from "/AW1-pages/utils/localstorageController.js"
+import { NavBar } from "/components/NavBar.js"
+import { cardComponents } from "/components/card.js"
+import { removeSessionItem } from "/utils/sessionstorageController.js"
+import { getData,setData,deleteData } from "/utils/localstorageController.js"
 
 let cardContainer=document.getElementById('card-container')
 let navContainer = document.querySelector('header')
